@@ -56,4 +56,14 @@ class Problematic {
 		#endif
 	}
 	
+	// compile error, ObjC categories on foundation classes that have been renamed in Swift cannot be found anymore when calling class method
+	func problematic8() {
+		NSNotification.problematicClassMethod()
+	}
+	
+	// compile error, ObjC categories on foundation classes that have been renamed in Swift cannot be found anymore when calling instance method that has a parameter
+	func problematic9(notification: NSNotification) {
+		notification.problematicInstanceMethodWithProblematicParameter(0)
+	}
+	
 }
