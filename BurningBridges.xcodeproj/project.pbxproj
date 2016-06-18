@@ -14,6 +14,8 @@
 		1F7EB15F1D1552F70008D9DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F7EB15E1D1552F70008D9DA /* Assets.xcassets */; };
 		1F7EB1621D1552F70008D9DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F7EB1601D1552F70008D9DA /* LaunchScreen.storyboard */; };
 		1F7EB16D1D1552F70008D9DA /* BurningBridgesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7EB16C1D1552F70008D9DA /* BurningBridgesTests.m */; };
+		1F7EB17A1D1554900008D9DA /* ProblematicBridgedObjCClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7EB1791D1554900008D9DA /* ProblematicBridgedObjCClass.m */; };
+		1F7EB17D1D1554B00008D9DA /* Problematic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7EB17C1D1554B00008D9DA /* Problematic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +42,10 @@
 		1F7EB1681D1552F70008D9DA /* BurningBridgesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BurningBridgesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F7EB16C1D1552F70008D9DA /* BurningBridgesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BurningBridgesTests.m; sourceTree = "<group>"; };
 		1F7EB16E1D1552F70008D9DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F7EB1781D1554900008D9DA /* ProblematicBridgedObjCClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProblematicBridgedObjCClass.h; path = Problematic/ProblematicBridgedObjCClass.h; sourceTree = "<group>"; };
+		1F7EB1791D1554900008D9DA /* ProblematicBridgedObjCClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProblematicBridgedObjCClass.m; path = Problematic/ProblematicBridgedObjCClass.m; sourceTree = "<group>"; };
 		1F7EB17B1D1554B00008D9DA /* BurningBridges-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BurningBridges-Bridging-Header.h"; sourceTree = "<group>"; };
+		1F7EB17C1D1554B00008D9DA /* Problematic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Problematic.swift; path = Problematic/Problematic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +87,7 @@
 		1F7EB1511D1552F70008D9DA /* BurningBridges */ = {
 			isa = PBXGroup;
 			children = (
+				1F7EB1771D1554530008D9DA /* Problematic */,
 				1F7EB1551D1552F70008D9DA /* AppDelegate.h */,
 				1F7EB1561D1552F70008D9DA /* AppDelegate.m */,
 				1F7EB1581D1552F70008D9DA /* ViewController.h */,
@@ -111,6 +117,16 @@
 				1F7EB16E1D1552F70008D9DA /* Info.plist */,
 			);
 			path = BurningBridgesTests;
+			sourceTree = "<group>";
+		};
+		1F7EB1771D1554530008D9DA /* Problematic */ = {
+			isa = PBXGroup;
+			children = (
+				1F7EB1781D1554900008D9DA /* ProblematicBridgedObjCClass.h */,
+				1F7EB1791D1554900008D9DA /* ProblematicBridgedObjCClass.m */,
+				1F7EB17C1D1554B00008D9DA /* Problematic.swift */,
+			);
+			name = Problematic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +232,8 @@
 				1F7EB15A1D1552F70008D9DA /* ViewController.m in Sources */,
 				1F7EB1571D1552F70008D9DA /* AppDelegate.m in Sources */,
 				1F7EB1541D1552F70008D9DA /* main.m in Sources */,
+				1F7EB17A1D1554900008D9DA /* ProblematicBridgedObjCClass.m in Sources */,
+				1F7EB17D1D1554B00008D9DA /* Problematic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
