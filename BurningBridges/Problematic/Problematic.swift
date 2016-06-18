@@ -1,5 +1,6 @@
 import Foundation
 import UIKit
+import Photos
 
 
 /**
@@ -27,6 +28,11 @@ class Problematic {
 	// compile error, uppercase enum gets bridged to uppercase, but converter converts to lowercase
 	func problematic4() {
 		let _: SecondObjcEnum = .CaseNotIncludingEnumNameAsPrefix
+	}
+	
+	// compile error, Default is not a real case but a static var, in Swift 3 it currently only can be referenced it the way `PHImageContentMode.Default`
+	func problematic5() {
+		let _: PHImageContentMode = .Default
 	}
 	
 }
