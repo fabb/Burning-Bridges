@@ -13,4 +13,9 @@ class Problematic {
 		ProblematicBridgedObjCClass.problematicWithLaunchedDueToDeepLink(true)
 	}
 	
+	// @noescape and @autoclosure are not moved to parameter type
+	func problematic2(@noescape block1: () -> Void, @autoclosure block2: () -> Void) {
+		
+	}
+	
 }
