@@ -24,4 +24,9 @@ class Problematic {
 		let _: UIUserInterfaceIdiom = .TV
 	}
 	
+	// compile error, uppercase enum gets bridged to uppercase, but converter converts to lowercase
+	func problematic4() {
+		let _: SecondObjcEnum = .CaseNotIncludingEnumNameAsPrefix
+	}
+	
 }
