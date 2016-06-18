@@ -6,4 +6,8 @@
 	
 }
 
++ (void)problematicWithBlock:(void (^)(NSError *))block {
+	
+}
+
 @end

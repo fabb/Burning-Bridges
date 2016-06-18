@@ -13,5 +13,6 @@ typedef NS_ENUM(NSInteger, SecondObjcEnum) {
 @interface ProblematicBridgedObjCClass : NSObject
 
 + (void)problematicWithLaunchedDueToDeepLink:(BOOL)launchedDueToDeepLink;
++ (void)problematicWithBlock:(void (^)(NSError *))block;
 
 @end

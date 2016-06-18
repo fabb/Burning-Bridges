@@ -66,4 +66,11 @@ class Problematic {
 		notification.problematicInstanceMethodWithProblematicParameter(0)
 	}
 	
+	// compile error, block parameter nullability is not migrated
+	func problematic10() {
+		ProblematicBridgedObjCClass.problematicWithBlock({ (error: NSError!) -> Void in
+			let _: NSError = error
+		})
+	}
+	
 }
