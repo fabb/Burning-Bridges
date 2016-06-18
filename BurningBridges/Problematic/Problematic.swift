@@ -21,6 +21,7 @@ class Problematic {
 	// compile error, uppercase enum gets bridged to uppercase, but converter converts to lowercase
 	func problematic3() {
 		let _: ObjCEnum = .UPPERCASE
+		let _: UIUserInterfaceIdiom = .TV
 	}
 	
 }
