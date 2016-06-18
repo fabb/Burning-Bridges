@@ -73,4 +73,18 @@ class Problematic {
 		})
 	}
 	
+	// compile error, URLComponents is not mutable anymore
+	func problematic11(url: NSURL, query: String) {
+		guard let urlComponents = NSURLComponents(URL: url, resolvingAgainstBaseURL: false) else {
+			return
+		}
+		
+		if query.characters.count > 0 {
+			urlComponents.query = query
+		}
+		else {
+			urlComponents.query = nil
+		}
+	}
+	
 }
