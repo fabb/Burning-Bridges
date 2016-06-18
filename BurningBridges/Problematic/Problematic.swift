@@ -87,4 +87,9 @@ class Problematic {
 		}
 	}
 	
+	// compile error, stringByRemovingPercentEncoding is not migrated to removingPercentEncoding
+	func problematic12(string: String) {
+		let _ = string.stringByRemovingPercentEncoding
+	}
+	
 }
