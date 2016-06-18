@@ -35,4 +35,10 @@ class Problematic {
 		let _: PHImageContentMode = .Default
 	}
 	
+	// compile error, lastObject now returns concrete type instead of AnyObject?
+	func problematic6() {
+		let fetchResult: PHFetchResult? = nil
+		let _: PHAsset? = fetchResult?.lastObject as? PHAsset
+	}
+	
 }
