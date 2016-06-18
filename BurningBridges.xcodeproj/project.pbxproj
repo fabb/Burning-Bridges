@@ -40,6 +40,7 @@
 		1F7EB1681D1552F70008D9DA /* BurningBridgesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BurningBridgesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F7EB16C1D1552F70008D9DA /* BurningBridgesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BurningBridgesTests.m; sourceTree = "<group>"; };
 		1F7EB16E1D1552F70008D9DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F7EB17B1D1554B00008D9DA /* BurningBridges-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BurningBridges-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +98,7 @@
 		1F7EB1521D1552F70008D9DA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1F7EB17B1D1554B00008D9DA /* BurningBridges-Bridging-Header.h */,
 				1F7EB1531D1552F70008D9DA /* main.m */,
 			);
 			name = "Supporting Files";
@@ -343,10 +345,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BurningBridges/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = my.org.BurningBridges;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BurningBridges/BurningBridges-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -354,10 +359,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BurningBridges/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = my.org.BurningBridges;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BurningBridges/BurningBridges-Bridging-Header.h";
 			};
 			name = Release;
 		};
