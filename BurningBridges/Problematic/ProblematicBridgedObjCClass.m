@@ -10,4 +10,8 @@
 	
 }
 
++ (void)showResultsWithUrl:(NSURL *)someParameter {
+
+}
+
 @end

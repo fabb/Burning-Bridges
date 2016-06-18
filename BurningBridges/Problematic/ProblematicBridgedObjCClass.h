@@ -14,5 +14,6 @@ typedef NS_ENUM(NSInteger, SecondObjcEnum) {
 
 + (void)problematicWithLaunchedDueToDeepLink:(BOOL)launchedDueToDeepLink;
 + (void)problematicWithBlock:(void (^)(NSError *))block;
++ (void)showResultsWithUrl:(NSURL *)someParameter;
 
 @end

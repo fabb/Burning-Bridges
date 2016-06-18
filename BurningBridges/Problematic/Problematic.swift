@@ -91,5 +91,10 @@ class Problematic {
 	func problematic12(string: String) {
 		let _ = string.stringByRemovingPercentEncoding
 	}
-	
+
+	// compile error, migration of showResultsWithUrl misses parameter name
+	func problematic13() {
+		ProblematicBridgedObjCClass.showResultsWithUrl(nil)
+	}
+
 }
