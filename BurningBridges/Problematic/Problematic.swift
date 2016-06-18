@@ -3,6 +3,11 @@ import UIKit
 import Photos
 
 
+enum SwiftEnum {
+	case Case1
+}
+
+
 /**
 	This class demonstrates a few problems that happen with the Swift 3 migrator and bridge in Xcode 8
 	Tested with Xcode 8 beta 1
@@ -39,6 +44,16 @@ class Problematic {
 	func problematic6() {
 		let fetchResult: PHFetchResult? = nil
 		let _: PHAsset? = fetchResult?.lastObject as? PHAsset
+	}
+	
+	// compile error, only codepaths for Release build config get migrated
+	func problematic7() {
+		#if DEBUG
+			// does not get migrated
+			let _: SwiftEnum = .Case1
+		#else
+			let _: SwiftEnum = .Case1
+		#endif
 	}
 	
 }
