@@ -20,19 +20,22 @@ class Problematic {
 	}
 	
 	// @noescape and @autoclosure are not moved to parameter type
+	// WORSE in beta 3, as the @noescape is also added to block2
 	func problematic2(@noescape block1: () -> Void, @autoclosure block2: () -> Void) {
 		
 	}
 	
 	// compile error, uppercase enum gets bridged to uppercase, but converter converts to lowercase
+	// FIXED
 	func problematic3() {
-		let _: ObjCEnum = .UPPERCASE
+		let _: ObjCEnum = .UPPERCASE // this was fixed in beta 3
 		let _: UIUserInterfaceIdiom = .TV // this was fixed in beta 2
 	}
 	
 	// compile error, uppercase enum gets bridged to uppercase, but converter converts to lowercase
+	// FIXED
 	func problematic4() {
-		let _: SecondObjcEnum = .CaseNotIncludingEnumNameAsPrefix
+		let _: SecondObjcEnum = .CaseNotIncludingEnumNameAsPrefix // this was fixed in beta 3
 	}
 	
 	// compile error, Default is not a real case but a static var, in Swift 3 it currently only can be referenced it the way `PHImageContentMode.Default`
