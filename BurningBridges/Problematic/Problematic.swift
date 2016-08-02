@@ -96,8 +96,9 @@ class Problematic {
 	}
 
 	// compile error, migration of showResultsWithUrl misses parameter name
+	// FIXED
 	func problematic13() {
-		ProblematicBridgedObjCClass.showResultsWithUrl(nil)
+		ProblematicBridgedObjCClass.showResultsWithUrl(nil) // FIXED in beta 4
 	}
 
 }
