@@ -20,7 +20,7 @@ class Problematic {
 	}
 	
 	// @noescape and @autoclosure are not moved to parameter type
-	// WORSE in beta 3, as the @noescape is also added to block2
+	// FIXED in beta 6
 	func problematic2(@noescape block1: () -> Void, @autoclosure block2: () -> Void) {
 		
 	}
